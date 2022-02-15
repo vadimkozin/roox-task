@@ -1,0 +1,27 @@
+.button {
+  display: block;
+  padding: 5px 15px;
+  background-color: var(--bg-button-color);
+  color: var(--text-secondary);
+  border-radius: 5px;
+  border: none;
+  line-height: 14px;
+
+  &_mute {
+    background-color: var(--button-mute-bg-color);
+  }
+
+  &_send {
+    background-color: var(--button-send-bg-color);
+  }
+
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &_mute:hover {
+    opacity: 1;
+    cursor: auto;
+  }
+}

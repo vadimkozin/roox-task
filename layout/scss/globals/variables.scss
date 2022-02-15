@@ -1,0 +1,28 @@
+:root {
+  --bg-root-color: #e5e5e5;
+  --bg-color: #ffffff;
+  --bg-sidebar-color: #bdbdbd;
+  --bg-button-color: #4b51ef;
+  --bg-card-color: #f3f3f3;
+  --text-primary: #000000;
+  --text-secondary: #ffffff;
+  --text-muted: #a3a3a3;
+  --link-color: #4b51ef;
+  --alarm-color: #d91313;
+  --form-border-color: #f3f3f3;
+  --form-input-border-color: #d8d8d8;
+  --form-input-bg-color: #ffffff;
+  --form-input-readonly-color: rgba(0, 0, 0, 0.3);
+  --form-input-write-color: var(--text-primary);
+  --button-mute-bg-color: #afafaf;
+  --button-send-bg-color: #52cf4f;
+  --max-width-app: 665px;
+  --max-width-card: 420px;
+  --max-width-form: 438px;
+  --width-left-column-app: 152px;
+
+  background-color: var(--bg-root-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+}

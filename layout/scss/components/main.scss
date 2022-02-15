@@ -1,0 +1,13 @@
+.main {
+  grid-area: main;
+  overflow-y: auto;
+  padding-left: 34px;
+
+  &__header {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 19px;
+    margin-bottom: 17px;
+  }
+}

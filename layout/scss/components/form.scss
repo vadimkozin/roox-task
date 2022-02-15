@@ -1,0 +1,16 @@
+.form {
+  border: 1px solid var(--form-border-color);
+  border-radius: 8px;
+  padding: 20px 12px 19px;
+
+  &__inner {
+    padding: 0;
+    border: none;
+  }
+  
+  &__footer {
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+  }
+}

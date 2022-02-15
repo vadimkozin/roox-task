@@ -1,0 +1,62 @@
+.form {
+  max-width: var(--max-width-form);
+  fieldset {
+    max-width: var(--max-width-form);
+    border: none;
+    border: 1px solid var(--form-border-color);
+    border-radius: 8px;
+    padding: 20px 12px 19px;
+  }
+
+  label,
+  input,
+  textarea {
+    display: block;
+  }
+
+  textarea {
+    width: 100%;
+    height: 55px;
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--form-input-bg-color);
+    border-radius: 5px;
+    margin-top: 3px;
+  }
+
+  label {
+    font-size: 8px;
+    line-height: 9px;
+  }
+
+  input {
+    max-width: 211px;
+    width: 100%;
+    height: 22.65px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--form-input-bg-color);
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--form-input-readonly-color);
+
+    &.is_readonly {
+      color: var(--form-input-readonly-color);
+    }
+
+    &.is_edit {
+      color: var(--form-input-write-color);
+    }
+
+    &.is_error {
+      border-color: var(--alarm-color);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+  }
+}

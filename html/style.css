@@ -1,0 +1,239 @@
+:root {
+  --bg-root-color: #e5e5e5;
+  --bg-color: #ffffff;
+  --bg-sidebar-color: #bdbdbd;
+  --bg-button-color: #4b51ef;
+  --bg-card-color: #f3f3f3;
+  --text-primary: #000000;
+  --text-secondary: #ffffff;
+  --text-muted: #a3a3a3;
+  --link-color: #4b51ef;
+  --alarm-color: #d91313;
+  --form-border-color: #f3f3f3;
+  --form-input-border-color: #d8d8d8;
+  --form-input-bg-color: #ffffff;
+  --form-input-readonly-color: rgba(0, 0, 0, 0.3);
+  --form-input-write-color: var(--text-primary);
+  --button-mute-bg-color: #afafaf;
+  --button-send-bg-color: #52cf4f;
+  --max-width-app: 665px;
+  --max-width-card: 420px;
+  --max-width-form: 438px;
+  --width-left-column-app: 152px;
+
+  background-color: var(--bg-root-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 'aside main';
+  grid-template-columns: var(--width-left-column-app) 1fr;
+  grid-template-rows: 100vh;
+  max-width: var(--max-width-app);
+  margin: 0 auto;
+  background-color: var(--bg-color);
+}
+
+.sidebar {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+  background-color: var(--bg-sidebar-color);
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.sidebar > * + * {
+  margin-top: 10px;
+}
+
+.sidebar__title {
+  margin: 0;
+}
+
+.button {
+  display: block;
+  padding: 5px 15px;
+  background-color: var(--bg-button-color);
+  color: var(--text-secondary);
+  border-radius: 5px;
+  border: none;
+  line-height: 14px;
+}
+
+.button-mute {
+  background-color: var(--button-mute-bg-color);
+}
+
+.button-send {
+  background-color: var(--button-send-bg-color);
+}
+
+.button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.button-mute:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.main {
+  grid-area: main;
+  overflow-y: auto;
+  padding-left: 34px;
+}
+
+.main__header,
+.profile__header {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 19px;
+  margin-bottom: 17px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--max-width-card);
+  padding: 10px;
+  background-color: var(--bg-card-color);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.card:last-of-type {
+  margin-bottom: 0;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.card__body > * + * {
+  margin-top: 8px;
+}
+
+.card__link {
+  align-self: flex-end;
+  color: var(--link-color);
+}
+
+.card__body-key {
+  color: var(--text-muted);
+}
+
+.card__body-value {
+  margin-left: 7px;
+  color: var(--text-primary);
+}
+
+.users-total {
+  margin-top: 10px;
+  text-align: end;
+  max-width: var(--max-width-card);
+}
+
+/* page 2*/
+.wrapper {
+  max-width: var(--max-width-form);
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.form {
+  border: 1px solid var(--form-border-color);
+  border-radius: 8px;
+  padding: 20px 12px 19px;
+}
+.form__inner {
+  padding: 0;
+  border: none;
+}
+.form__footer {
+  display: flex;
+  justify-content: right;
+  margin-top: 10px;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field:last-of-type {
+  margin-bottom: 0;
+}
+
+.field__label,
+.field__input,
+.field__textarea {
+  display: block;
+}
+
+.field__textarea {
+  width: 100%;
+  height: 55px;
+  border: 1px solid var(--form-input-border-color);
+  background-color: var(--form-input-bg-color);
+  border-radius: 5px;
+  margin-top: 3px;
+}
+
+.field__label {
+  font-size: 8px;
+  line-height: 9px;
+}
+
+.field__input {
+  max-width: 211px;
+  width: 100%;
+  height: 22.65px;
+  margin-top: 3px;
+  border: 1px solid var(--form-input-border-color);
+  background-color: var(--form-input-bg-color);
+  border-radius: 5px;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--form-input-readonly-color);
+}
+
+.field__input.is-edit {
+  color: var(--form-input-write-color);
+}
+
+.field__input.is-alarm {
+  border-color: var(--alarm-color);
+}
+
+

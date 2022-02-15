@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page2</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <p class="title">Сортировка</p>
+        <button class="button">по городу</button>
+        <button class="button">по компании</button>
+      </aside>
+
+      <main class="main">
+        <div class="wrapper">
+          <div class="profile">
+            <h2 class="profile__header">Профиль пользователя</h2>
+            <button class="button">Редактировать</button>
+          </div>
+
+          <!-- name username email address.street address.city address.zipcode phone website -->
+          <form class="form" id="user">
+            <fieldset class="form__inner" disabled="disabled">
+              <div class="field">
+                <label class="field__label"
+                  >Name<input
+                    class="field__input"
+                    name="name"
+                    maxlength="50"
+                    value="Иван Иванов"
+                /></label>
+              </div>
+
+              <div class="field">
+                <label class="field__label"
+                  >User name<input
+                    class="field__input"
+                    name="username"
+                    maxlength="50"
+                    value="Иван"
+                /></label>
+              </div>
+
+              <div class="field">
+                <label class="field__label"
+                  >E-mail<input
+                    class="field__input"
+                    type="email"
+                    name="email"
+                    maxlength="50"
+                    value="example@mail.com"
+                /></label>
+              </div>
+
+              <div class="field">
+                <label class="field__label"
+                  >Street<input
+                    class="field__input"
+                    name="street"
+                    maxlength="80"
+                    value="Ул. Пример"
+                /></label>
+              </div>
+
+              <div class="field">
+                <label class="field__label"
+                  >City<input
+                    class="field__input"
+                    name="city"
+                    maxlength="50"
+                    value="Москва"
+                /></label>
+              </div>
+
+              <div class="field">
+                <label class="field__label"
+                  >Zip code<input
+                    class="field__input"
+                    type="text"
+                    name="zipcode"
+                    maxlength="10"
+                    pattern="[0-9]{5}-[0-9]{4}"
+                    title="zip code in format: 99999-9999"
+                    aria-label="zip code: 5 digits - 4 digits"
+                    value="92998-3874"
+                /></label>
+              </div>
+
+              <div class="field">
+                <label class="field__label"
+                  >Phone<input
+                    class="field__input"
+                    type="tel"
+                    name="phone"
+                    maxlength="30"
+                    value="(254)954-1289"
+                    title="phone code in free format"
+                    aria-label="number phone"
+                /></label>
+              </div>
+
+              <div class="field">
+                <label class="field__label"
+                  >Website<input
+                    class="field__input"
+                    type="text"
+                    name="website"
+                    maxlength="80"
+                    title="ex. https://example.com"
+                    aria-label="address website"
+                    value="demarco.info"
+                /></label>
+              </div>
+
+              <div class="field">
+                <label class="field__label"
+                  >Comment<textarea
+                    class="field__textarea"
+                    name="comment"
+                    maxlength="400"
+                  ></textarea>
+                </label>
+              </div>
+            </fieldset>
+          </form>
+          <div class="form__footer">
+            <button
+              class="button button-mute"
+              type="submit"
+              form="user"
+              disabled
+            >
+              Отправить
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
