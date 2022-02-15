@@ -1,5 +1,7 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
+import { Routes, Route, Outlet } from 'react-router-dom'
+// import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import Layout from 'src/components/layout/layout'
 import UsersPage from './users-page'
 import UserPage from './user-page'
@@ -7,7 +9,7 @@ import NotFoundPage from 'src/pages/not-found-page'
 
 const Pages = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path='/' element={<UsersPage />} />
@@ -18,7 +20,7 @@ const Pages = () => {
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
